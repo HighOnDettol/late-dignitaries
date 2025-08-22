@@ -47,6 +47,14 @@
             box-sizing: border-box;
         }
 
+        /* Set a fixed A4 size for the memento container to ensure it always fits on a single page */
+        .a4-container {
+            width: 8.27in; /* A4 paper width in portrait */
+            height: 11.69in; /* A4 paper height in portrait */
+            max-width: none;
+            max-height: none;
+        }
+
         /* Specific styles for the memento text to ensure ample space and classic feel */
         .memento-text {
             font-family: 'Lora', serif; /* A classic serif font for the memento content */
@@ -177,7 +185,7 @@
     </div>
 
     <!-- Memento Display Area - This content will be converted to PDF -->
-    <div id="mementoFrame" class="memento-container bg-beige-200 p-6 rounded-xl shadow-2xl w-full max-w-2xl">
+    <div id="mementoFrame" class="memento-container bg-beige-200 p-6 rounded-xl shadow-2xl a4-container">
         <div class="border-4 border-gold-main p-8 rounded-lg">
             <div class="bg-white p-6 rounded-md text-center relative shadow-md">
                 <!-- Watermark Image Container -->
@@ -200,6 +208,10 @@
                         <div class="inline-block bg-light-gold-bg text-gold-main px-6 py-2 rounded-full text-lg font-bold mb-8">
                             1975 - 2025
                         </div>
+                        
+                        <p class="text-xs text-center text-gray-500 mb-6 font-serif tracking-wide">
+                            (Registered under the West Bengal Societies Registration Act, 1961 - No. S/17073/1975-76)
+                        </p>
 
                         <!-- New dignified phrasing for late dignitaries -->
                         <p class="memento-text text-black mb-1" style="font-size: 1.0rem;">In loving memory and profound appreciation, we honor the invaluable contribution of</p>
