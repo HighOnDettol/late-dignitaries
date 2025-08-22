@@ -49,10 +49,26 @@
 
         /* Set a fixed A4 size for the memento container to ensure it always fits on a single page */
         .a4-container {
-            max-width: 8.27in; /* A4 paper width in portrait */
-            max-height: 11.69in; /* A4 paper height in portrait */
-            width: 100%;
-            height: 100%;
+            width: 8.27in; /* A4 paper width in portrait */
+            height: 11.69in; /* A4 paper height in portrait */
+            max-width: none;
+            max-height: none;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+        
+        /* Ensure inner components fill the available space */
+        #mementoFrame > div:first-child {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        #mementoFrame > div:first-child > div:first-child {
+             flex: 1;
+             display: flex;
+             flex-direction: column;
+             justify-content: space-between;
         }
 
         /* Specific styles for the memento text to ensure ample space and classic feel */
